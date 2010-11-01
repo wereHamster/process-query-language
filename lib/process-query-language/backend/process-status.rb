@@ -13,7 +13,7 @@ module ProcessQueryLanguage
 
       def scan(fields)
         result = []
-        %x[ps -Aco #{FIELDS.join(',')}].lines.to_a[1..-1].each do |line|
+        %x[ps -Ao #{FIELDS.join(',')}].lines.to_a[1..-1].each do |line|
           values = line.split(' ')
           process = {}
           FIELDS.each_with_index do |value, i|
