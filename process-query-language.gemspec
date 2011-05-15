@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
   s.platform     = Gem::Platform::RUBY
   s.files        = Dir.glob("lib/**/*") + %w[LICENSE README.md]
 
-  s.add_dependency 'plucky'
-  s.add_development_dependency 'shoulda'
+  s.add_dependency 'plucky', '~> 0.4'
+
+  s.add_development_dependency 'rake', '~> 0.8'
+  s.add_development_dependency 'shoulda', '~> 2.11'
 end
